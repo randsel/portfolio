@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoshifumi Kamikawabata | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            color: #e0e0e0;
+            background-color: #1a1a1a;
+        }
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.75rem;
+            margin-bottom: 3rem;
+            color: #f8f8f8;
+            font-weight: 700;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #6366f1;
+            border-radius: 9999px;
+        }
+        .card {
+            background-color: #2a2a2a;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #3a3a3a;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+            border-color: #6366f1;
+        }
+        .btn-primary {
+            background-color: #6366f1;
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #4f46e5;
+            transform: translateY(-2px);
+        }
+        .skill-bar-bg {
+            background-color: #3a3a3a;
+            height: 8px;
+            border-radius: 4px;
+        }
+        .skill-bar-fill {
+            background-color: #6366f1;
+            height: 8px;
+            border-radius: 4px;
+            transition: width 1.0s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header --><header class="bg-[#1a1a1a] shadow-lg sticky top-0 z-10 border-b border-[#3a3a3a]">
+        <nav class="container py-5 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-white">Yoshifumi Kamikawabata</h1>
+            <div class="space-x-8 text-lg font-medium flex items-center">
+                <a href="#about" class="text-gray-400 hover:text-indigo-400 transition duration-150">ABOUT</a>
+                <a href="#skills" class="text-gray-400 hover:text-indigo-400 transition duration-150">SKILLS</a>
+                <a href="#portfolio" class="text-gray-400 hover:text-indigo-400 transition duration-150">WORKS</a>
+                <a href="#contact" class="text-gray-400 hover:text-indigo-400 transition duration-150">CONTACT</a>
+                <!-- Language Switch -->
+                <a href="index.html" class="bg-indigo-700/50 text-indigo-200 py-1 px-3 rounded-full text-sm hover:bg-indigo-600 transition duration-150">
+                    <i class="fas fa-globe mr-1"></i> 日本語
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content --><main class="container py-16">
+
+        <!-- Hero Section --><section id="hero" class="text-center py-24 md:py-36 bg-[#2a2a2a] rounded-2xl shadow-xl mb-16 border border-[#3a3a3a]">
+            <div class="flex justify-center mb-8">
+                <!-- Profile Image Placeholder -->
+                <img src="https://placehold.co/600x600/ffffff/000000?text=Profile+Icon" 
+                     alt="Profile Icon" 
+                     class="rounded-full border-4 border-indigo-500 w-40 h-40 object-cover shadow-lg"
+                     onerror="this.onerror=null;this.src='https://placehold.co/180x180/6366f1/ffffff?text=Y.K';">
+            </div>
+            <h2 class="text-5xl sm:text-6xl font-extrabold text-white mb-4 leading-tight">
+                Hello, I'm <span class="text-indigo-400">Yoshifumi Kamikawabata</span>.
+            </h2>
+            <p class="text-2xl text-gray-300 font-light mb-8">
+                Nihon University, Applied Information Engineering / Licensed Teacher (IT & Math)
+            </p>
+            <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+                A student engineer whose strengths lie in logical analysis and team collaboration. I am passionate about simplifying complex challenges and constantly engage in creative projects that shape the future by merging my knowledge of information engineering and education.
+            </p>
+            <div class="mt-10">
+                <a href="#portfolio" class="btn-primary">
+                    View My Works <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section --><section id="about" class="py-16">
+            <h3 class="text-4xl section-title">ABOUT ME</h3>
+
+            <div class="bg-[#2a2a2a] p-10 rounded-2xl shadow-xl border border-[#3a3a3a]">
+                <h4 class="text-2xl font-semibold text-white mb-6 flex items-center">
+                    <i class="fas fa-handshake text-indigo-400 mr-3 text-2xl"></i>
+                    Greatest Effort in University (Gakuchika): Problem-Solving Flow
+                </h4>
+                
+                <div class="grid md:grid-cols-3 gap-8 text-center mt-8">
+                    <!-- STEP 1 -->
+                    <div class="space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-indigo-600 flex items-center justify-center mx-auto shadow-lg">
+                            <i class="fas fa-search text-white text-2xl"></i>
+                        </div>
+                        <p class="text-xl font-semibold text-indigo-400">STEP 01: Analysis</p>
+                        <p class="text-gray-400 text-sm">
+                            Logically identified the cause of discordant harmony as **low pitch**, not relying on empirical experience. Demonstrated strong analytical skills.
+                        </p>
+                    </div>
+
+                    <div class="hidden md:flex items-center justify-center"><i class="fas fa-arrow-right text-gray-600 text-2xl"></i></div>
+
+                    <!-- STEP 2 -->
+                    <div class="space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-indigo-600 flex items-center justify-center mx-auto shadow-lg">
+                            <i class="fas fa-comments text-white text-2xl"></i>
+                        </div>
+                        <p class="text-xl font-semibold text-indigo-400">STEP 02: Action</p>
+                        <p class="text-gray-400 text-sm">
+                            Proposed specific advice (conscious placement of resonance) and conducted focused practice. Showcased proactive leadership.
+                        </p>
+                    </div>
+
+                    <div class="hidden md:flex items-center justify-center"><i class="fas fa-arrow-right text-gray-600 text-2xl"></i></div>
+
+                    <!-- STEP 3 -->
+                    <div class="space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-indigo-600 flex items-center justify-center mx-auto shadow-lg">
+                            <i class="fas fa-trophy text-white text-2xl"></i>
+                        </div>
+                        <p class="text-xl font-semibold text-indigo-400">STEP 03: Result</p>
+                        <p class="text-gray-400 text-sm">
+                            Successfully achieved a beautiful, clear harmony. Learned the value of proactive, collaborative problem-solving.
+                        </p>
+                    </div>
+                </div>
+
+                <h4 class="text-2xl font-semibold text-white mb-4 mt-12 flex items-center border-t border-gray-600 pt-6">
+                    <i class="fas fa-graduation-cap text-indigo-400 mr-3 text-2xl"></i>
+                    Education & Qualifications
+                </h4>
+                <ul class="list-disc list-inside text-gray-300 ml-4 space-y-2 text-lg">
+                    <li>**Nihon University, Applied Information Engineering**</li>
+                    <li>High School Teaching License (Information Technology)</li>
+                    <li>High School Teaching License (Mathematics)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section --><section id="skills" class="py-16">
+            <h3 class="text-4xl section-title">SKILLS & COMPETENCIES</h3>
+            
+            <div class="bg-[#2a2a2a] p-10 rounded-2xl shadow-xl border border-[#3a3a3a]">
+                <h4 class="text-2xl font-semibold text-white mb-6 flex items-center">
+                    <i class="fas fa-code text-indigo-400 mr-3 text-2xl"></i> Technical Skills
+                </h4>
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-lg text-gray-300"><i class="fab fa-python text-yellow-500 mr-2"></i> Python</span>
+                            <span class="text-indigo-400 font-medium">85%</span>
+                        </div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-lg text-gray-300"><i class="fab fa-js-square text-yellow-400 mr-2"></i> Web Dev (HTML/CSS/JS)</span>
+                            <span class="text-indigo-400 font-medium">75%</span>
+                        </div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+                    </div>
+                </div>
+
+                <h4 class="text-2xl font-semibold text-white mb-6 mt-12 flex items-center border-t border-gray-600 pt-6">
+                    <i class="fas fa-lightbulb text-indigo-400 mr-3 text-2xl"></i> Core Competencies
+                </h4>
+                <div class="flex flex-wrap gap-4 text-center">
+                    <span class="bg-indigo-700/50 text-indigo-200 py-2 px-4 rounded-full text-sm font-medium shadow-md"><i class="fas fa-chart-line mr-2"></i> Logical Analysis</span>
+                    <span class="bg-indigo-700/50 text-indigo-200 py-2 px-4 rounded-full text-sm font-medium shadow-md"><i class="fas fa-users mr-2"></i> Teamwork</span>
+                    <span class="bg-indigo-700/50 text-indigo-200 py-2 px-4 rounded-full text-sm font-medium shadow-md"><i class="fas fa-brain mr-2"></i> Math Thinking</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section --><section id="portfolio" class="py-16">
+            <h3 class="text-4xl section-title">PORTFOLIO</h3>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="card rounded-2xl overflow-hidden">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=DATA+ANALYSIS" alt="Data Project" class="w-full h-56 object-cover border-b border-[#3a3a3a]">
+                    <div class="p-8">
+                        <h4 class="text-2xl font-semibold text-white mb-2">Data Analysis Project</h4>
+                        <p class="text-md text-indigo-400 mb-4">#Python #Pandas</p>
+                        <p class="text-gray-300 mb-6">Retail sales data analysis project using Python. Identified customer patterns and proposed optimization logic.</p>
+                        <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details <i class="fas fa-external-link-alt ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+                <div class="card rounded-2xl overflow-hidden">
+                    <img src="https://placehold.co/600x400/6366f1/ffffff?text=WEB+DESIGN" alt="Web Project" class="w-full h-56 object-cover border-b border-[#3a3a3a]">
+                    <div class="p-8">
+                        <h4 class="text-2xl font-semibold text-white mb-2">Responsive Web Design</h4>
+                        <p class="text-md text-indigo-400 mb-4">#HTML #CSS #Tailwind</p>
+                        <p class="text-gray-300 mb-6">A promotional website for a café, designed with a mobile-first approach.</p>
+                        <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details <i class="fas fa-external-link-alt ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section --><section id="contact" class="py-16">
+            <h3 class="text-4xl section-title">CONTACT</h3>
+            <div class="bg-[#2a2a2a] p-10 rounded-2xl shadow-xl border border-[#3a3a3a] text-center">
+                <p class="text-gray-300 mb-8 text-xl">Feel free to contact me.</p>
+                <div class="flex justify-center space-x-10">
+                    <a href="mailto:yoshifumi.uekawabata@example.com" class="text-white hover:text-indigo-400 text-xl"><i class="fas fa-envelope mr-2"></i> Email</a>
+                    <a href="#" class="text-white hover:text-indigo-400 text-xl"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer --><footer class="bg-[#1a1a1a] text-gray-500 py-8 mt-20 border-t border-[#3a3a3a]">
+        <div class="container text-center">
+            <p class="text-md">&copy; 2024 Yoshifumi Kamikawabata. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
