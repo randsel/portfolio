@@ -15,7 +15,7 @@
             background-color: #1a1a1a; /* ダークな背景 */
         }
         .container {
-            max-width: 1200px; /* 少し広めに */
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
             padding-left: 1rem;
@@ -24,30 +24,30 @@
         .section-title {
             position: relative;
             display: inline-block;
-            padding-bottom: 0.75rem; /* 下線とのスペースを広げる */
-            margin-bottom: 3rem; /* セクションタイトルとコンテンツの間のスペース */
-            color: #f8f8f8; /* タイトルカラーを白に */
-            font-weight: 700; /* より太く */
+            padding-bottom: 0.75rem;
+            margin-bottom: 3rem;
+            color: #f8f8f8;
+            font-weight: 700;
         }
         .section-title::after {
             content: '';
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 80px; /* 下線の長さを調整 */
-            height: 4px; /* 下線を太く */
+            width: 80px;
+            height: 4px;
             background-color: #6366f1; /* インディゴブルーをアクセントカラーに */
             border-radius: 9999px;
         }
         .card {
-            background-color: #2a2a2a; /* カードの背景をダークグレーに */
+            background-color: #2a2a2a;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #3a3a3a; /* 細いボーダーを追加 */
+            border: 1px solid #3a3a3a;
         }
         .card:hover {
-            transform: translateY(-8px); /* ホバー時の浮き上がりを強調 */
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); /* ホバー時の影を濃く */
-            border-color: #6366f1; /* ホバー時にボーダーカラーをアクセントカラーに */
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+            border-color: #6366f1;
         }
         .btn-primary {
             background-color: #6366f1;
@@ -56,7 +56,7 @@
             border-radius: 9999px;
             font-weight: 600;
             transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3); /* シャドウを追加 */
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
         }
         .btn-primary:hover {
             background-color: #4f46e5;
@@ -72,16 +72,7 @@
             background-color: #6366f1;
             height: 8px;
             border-radius: 4px;
-            transition: width 1.0s ease-out; /* アニメーション */
-        }
-        /* 日本語と英語の区切り線 */
-        .lang-separator {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 1px;
-            background-color: #4f46e5; /* 濃いめのインディゴ */
-            margin: 0.5rem 0;
+            transition: width 1.0s ease-out;
         }
     </style>
 </head>
@@ -89,12 +80,16 @@
 
     <!-- ヘッダー / ナビゲーション --><header class="bg-[#1a1a1a] shadow-lg sticky top-0 z-10 border-b border-[#3a3a3a]">
         <nav class="container py-5 flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold text-white">Yoshifumi Kamikawabata</h1>
-            <div class="space-x-8 text-lg font-medium">
+            <h1 class="text-3xl font-extrabold text-white">上川畑 佳郁 | ポートフォリオ</h1>
+            <div class="space-x-8 text-lg font-medium flex items-center">
                 <a href="#about" class="text-gray-400 hover:text-indigo-400 transition duration-150">ABOUT</a>
                 <a href="#skills" class="text-gray-400 hover:text-indigo-400 transition duration-150">SKILLS</a>
                 <a href="#portfolio" class="text-gray-400 hover:text-indigo-400 transition duration-150">WORKS</a>
                 <a href="#contact" class="text-gray-400 hover:text-indigo-400 transition duration-150">CONTACT</a>
+                <!-- 言語切り替えリンク -->
+                <a href="portfolio_en.html" class="bg-indigo-700/50 text-indigo-200 py-1 px-3 rounded-full text-sm hover:bg-indigo-600 transition duration-150">
+                    <i class="fas fa-globe mr-1"></i> English
+                </a>
             </div>
         </nav>
     </header>
@@ -108,6 +103,7 @@
                      alt="プロフィールアイコン" 
                      class="rounded-full border-4 border-indigo-500 w-40 h-40 object-cover shadow-lg"
                      onerror="this.onerror=null;this.src='https://placehold.co/180x180/6366f1/ffffff?text=Y.K';">
+                <!-- 実際の画像URLに差し替えてください -->
             </div>
             <h2 class="text-5xl sm:text-6xl font-extrabold text-white mb-4 leading-tight">
                 Hello, I'm <span class="text-indigo-400">上川畑 佳郁</span>.
@@ -117,12 +113,10 @@
             </p>
             <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
                 論理的な分析力とチームでの協調性を強みとし、複雑な課題をシンプルに解決することに情熱を燃やす学生です。情報工学と教育の知識を融合させ、未来を形作るクリエイティブな挑戦に日々取り組んでいます。
-                <div class="lang-separator"></div>
-                A student engineer passionate about solving complex problems with logical analysis and team collaboration. I leverage my knowledge in Information Engineering and Education to tackle creative challenges that shape the future.
             </p>
             <div class="mt-10">
                 <a href="#portfolio" class="btn-primary">
-                    My Works <i class="fas fa-arrow-right ml-2"></i>
+                    Worksを見る <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
         </section>
@@ -147,8 +141,6 @@
                         <p class="text-xl font-semibold text-indigo-400">STEP 01: 分析と原因特定</p>
                         <p class="text-gray-400 text-sm">
                             和音が濁る原因を、経験論ではなく**音のピッチの低さ**だと論理的に特定。課題の本質を見抜く分析力を発揮しました。
-                            <span class="lang-separator bg-gray-700"></span>
-                            Identified the root cause of discordant sound not empirically but logically as **low pitch**. Demonstrated analytical skills in finding the core issue.
                         </p>
                     </div>
 
@@ -165,8 +157,6 @@
                         <p class="text-xl font-semibold text-indigo-400">STEP 02: 提案と実践</p>
                         <p class="text-gray-400 text-sm">
                             具体的な助言（響きの位置意識）を提案し、そのパートに寄り添って重点的な練習を共に実施。チームを巻き込む主体的な行動力を示しました。
-                            <span class="lang-separator bg-gray-700"></span>
-                            Proposed specific advice (conscious placement of resonance) and conducted focused practice. Showcased proactive leadership and teamwork.
                         </p>
                     </div>
 
@@ -183,8 +173,6 @@
                         <p class="text-xl font-semibold text-indigo-400">STEP 03: 最高の成果</p>
                         <p class="text-gray-400 text-sm">
                             課題意識の共有と実践の結果、透き通るような美しい和音で見事にハモることに成功。チームで主体的に解決する価値を学びました。
-                            <span class="lang-separator bg-gray-700"></span>
-                            Successfully achieved a beautiful, clear harmony by sharing awareness and practice. Learned the value of proactive, collaborative problem-solving.
                         </p>
                     </div>
                 </div>
@@ -192,18 +180,18 @@
                 
                 <h4 class="text-2xl font-semibold text-white mb-4 mt-12 flex items-center border-t border-gray-600 pt-6">
                     <i class="fas fa-graduation-cap text-indigo-400 mr-3 text-2xl"></i>
-                    学歴・保有資格 | Education & Qualifications
+                    学歴・保有資格
                 </h4>
                 <ul class="list-disc list-inside text-gray-300 ml-4 space-y-2 text-lg">
-                    <li>**日本大学 応用情報工学科** 在籍 (Information Engineering, Programming, Algorithms)</li>
-                    <li>高等学校教諭一種免許状（情報）取得 (High School Teaching License: Information Technology)</li>
-                    <li>高等学校教諭一種免許状（数学）取得 (High School Teaching License: Mathematics)</li>
+                    <li>**日本大学 応用情報工学科** 在籍 (情報工学、プログラミング、アルゴリズムを専攻)</li>
+                    <li>高等学校教諭一種免許状（情報）取得</li>
+                    <li>高等学校教諭一種免許状（数学）取得</li>
                 </ul>
 
             </div>
         </section>
 
-        <!-- 新設: スキルセクション (SKILLS) -->
+        <!-- スキルセクション (SKILLS) -->
         <section id="skills" class="py-16">
             <h3 class="text-4xl section-title">SKILLS & COMPETENCIES | スキルと強み</h3>
             
@@ -212,7 +200,7 @@
                 <!-- 技術スキル (プログラミング、ツール) -->
                 <h4 class="text-2xl font-semibold text-white mb-6 flex items-center">
                     <i class="fas fa-code text-indigo-400 mr-3 text-2xl"></i>
-                    Technical Skills | 技術スキル
+                    技術スキル
                 </h4>
                 
                 <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
@@ -224,7 +212,6 @@
                             <span class="text-indigo-400 font-medium">85%</span>
                         </div>
                         <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
-                        <p class="text-xs text-gray-500 mt-1">Data Analysis / Machine Learning</p>
                     </div>
                     
                     <!-- Skill 2: Web Dev (HTML/CSS/JS) -->
@@ -234,7 +221,6 @@
                             <span class="text-indigo-400 font-medium">75%</span>
                         </div>
                         <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
-                        <p class="text-xs text-gray-500 mt-1">HTML/CSS/JS (Responsive Design, Tailwind CSS)</p>
                     </div>
                     
                     <!-- Skill 3: C/C++ -->
@@ -244,7 +230,6 @@
                             <span class="text-indigo-400 font-medium">60%</span>
                         </div>
                         <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 60%;"></div></div>
-                        <p class="text-xs text-gray-500 mt-1">C / C++ (Fundamental Algorithms)</p>
                     </div>
 
                     <!-- Skill 4: データベース (SQL) -->
@@ -254,7 +239,6 @@
                             <span class="text-indigo-400 font-medium">70%</span>
                         </div>
                         <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%;"></div></div>
-                        <p class="text-xs text-gray-500 mt-1">Database Management (SQL)</p>
                     </div>
 
                 </div>
@@ -262,20 +246,20 @@
                 <!-- ソフトスキル (強み) -->
                 <h4 class="text-2xl font-semibold text-white mb-6 mt-12 flex items-center border-t border-gray-600 pt-6">
                     <i class="fas fa-lightbulb text-indigo-400 mr-3 text-2xl"></i>
-                    Core Competencies | 主要な強み
+                    主要な強み
                 </h4>
                 <div class="flex flex-wrap gap-4 text-center">
                     <span class="bg-indigo-700/50 text-indigo-200 py-2 px-4 rounded-full text-sm font-medium shadow-md">
-                        <i class="fas fa-chart-line mr-2"></i> Logical Analysis | 論理的分析力
+                        <i class="fas fa-chart-line mr-2"></i> 論理的分析力
                     </span>
                     <span class="bg-indigo-700/50 text-indigo-200 py-2 px-4 rounded-full text-sm font-medium shadow-md">
-                        <i class="fas fa-users mr-2"></i> Proactive Teamwork | 主体的な協調性
+                        <i class="fas fa-users mr-2"></i> チームでの主体的な解決
                     </span>
                     <span class="bg-indigo-700/50 text-indigo-200 py-2 px-4 rounded-full text-sm font-medium shadow-md">
-                        <i class="fas fa-brain mr-2"></i> Mathematical Thinking | 数学的思考
+                        <i class="fas fa-brain mr-2"></i> 数学的思考力
                     </span>
                     <span class="bg-indigo-700/50 text-indigo-200 py-2 px-4 rounded-full text-sm font-medium shadow-md">
-                        <i class="fas fa-bolt mr-2"></i> Adaptability | 新技術への適応力
+                        <i class="fas fa-bolt mr-2"></i> 新技術への適応力
                     </span>
                 </div>
                 
@@ -294,11 +278,9 @@
                         <p class="text-md text-indigo-400 mb-4">#Python #Pandas #DataViz</p>
                         <p class="text-gray-300 mb-6 leading-relaxed">
                             大学の講義で実施した、小売店の売上データ分析プロジェクトです。顧客行動のパターンを特定し、在庫最適化のためのロジックを提案しました。複雑なデータを直感的に理解できるよう、効果的な可視化にも注力しました。
-                            <span class="lang-separator bg-gray-700"></span>
-                            A retail sales data analysis project using Python. Identified customer behavior patterns and proposed logic for inventory optimization, focusing on effective data visualization.
                         </p>
                         <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium flex items-center text-lg">
-                            詳細を見る / View Details <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            詳細を見る <i class="fas fa-external-link-alt ml-2 text-sm"></i>
                         </a>
                     </div>
                 </div>
@@ -310,11 +292,9 @@
                         <p class="text-md text-indigo-400 mb-4">#HTML #CSS #TailwindCSS #UI/UX</p>
                         <p class="text-gray-300 mb-6 leading-relaxed">
                             個人で制作したカフェのプロモーションサイトです。あらゆるデバイスで最高のユーザー体験を提供できるよう、モバイルファーストを意識したレスポンシブデザインと、直感的なUI/UX設計を追求しました。
-                            <span class="lang-separator bg-gray-700"></span>
-                            A personal promotional website for a café. Designed with a mobile-first approach and responsive layout, prioritizing intuitive UI/UX for the best user experience on all devices.
                         </p>
                         <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium flex items-center text-lg">
-                            詳細を見る / View Details <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            詳細を見る <i class="fas fa-external-link-alt ml-2 text-sm"></i>
                         </a>
                     </div>
                 </div>
@@ -328,9 +308,6 @@
                 <p class="text-gray-300 mb-8 text-xl leading-relaxed">
                     私のスキルや情熱にご興味をお持ちいただけましたら、ぜひお気軽にご連絡ください。
                     新しい挑戦の機会を楽しみにしています。
-                    <div class="lang-separator"></div>
-                    If you are interested in my skills and passion, please feel free to contact me.
-                    I look forward to discussing new challenges and opportunities.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-10">
                     <div class="flex items-center text-xl text-white">
@@ -349,7 +326,7 @@
 
     <!-- フッター --><footer class="bg-[#1a1a1a] text-gray-500 py-8 mt-20 border-t border-[#3a3a3a]">
         <div class="container text-center">
-            <p class="text-md">&copy; 2024 Yoshifumi Kamikawabata. All Rights Reserved.</p>
+            <p class="text-md">&copy; 2024 上川畑 佳郁. All Rights Reserved.</p>
             <p class="text-sm mt-2">Designed with <i class="fas fa-heart text-red-500 mx-1"></i> and Code.</p>
         </div>
     </footer>
